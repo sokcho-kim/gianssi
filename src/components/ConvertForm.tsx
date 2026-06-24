@@ -21,7 +21,7 @@ const DEFAULT_TEMPLATES: Template[] = [
 export default function ConvertForm() {
   const [notionUrl, setNotionUrl] = useState("");
   const [template, setTemplate] = useState("report");
-  const [restructure, setRestructure] = useState(true);
+  const [restructure, setRestructure] = useState(false);
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");

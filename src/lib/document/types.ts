@@ -30,7 +30,8 @@ export type Block =
   | TableBlock
   | ImageBlock
   | DividerBlock
-  | CalloutBlock;
+  | CalloutBlock
+  | ColumnsBlock;
 
 interface BaseBlock {
   type: string;
@@ -77,6 +78,12 @@ export interface CalloutBlock extends BaseBlock {
   type: "callout";
   icon?: string;
   richText: RichText[];
+}
+
+/** 노션 컬럼 레이아웃 (가로 N단 배치 그대로 보존) */
+export interface ColumnsBlock extends BaseBlock {
+  type: "columns";
+  columns: Block[][];
 }
 
 export interface RichText {

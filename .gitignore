@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# 회사 보고서 데이터/산출물 (PUBLIC repo — PII/이미지 커밋 금지)
+/fixtures/
+/public/img/
+# 만료 AWS STS 토큰이 하드코딩된 1회용 스크립트
+/scripts/dl-images.mjs
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
